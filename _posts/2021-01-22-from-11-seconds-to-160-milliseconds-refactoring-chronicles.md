@@ -21,7 +21,7 @@ It is an API Gateway + Lambda + Aurora Serverless which is invoked by an **ETL**
 
 So why was the Lambda timing out?
 
-Depending on the filter passed to the API **the query was taking longer than the 10 seconds originally set as Lambda Timeout. 
+Depending on the filter passed to the API **the query was taking longer than the 10 seconds originally set as Lambda Timeout.** 
 Of course increasing the Timeout was not the solution.  ( and at first we did exactly that, until sometimes **we hit the APIGateway timeout hard limit of 29 seconds**. 
 
 It was clear we should investigate the issue. 
