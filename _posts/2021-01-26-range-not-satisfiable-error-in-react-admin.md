@@ -14,7 +14,7 @@ If after updating your ReactAdmin (and therefore your ra-data-simple-rest to ver
 simpleRestProvider('http://path.to.my.api/', fetchUtils.fetchJson, 'X-Total-Count')
 ```
 
-![416 Range not Satisfiable Error](./images/416error.png)
+![416 Range not Satisfiable Error](/assets/images/416error.png)
 
 ----  
 Recently we updated the dependencies on a project which we didn't touch for about about 6 months.  Of course, after running `npm outdated` we found A LOT.
@@ -42,7 +42,7 @@ According to the [Official React Admin documentation](https://marmelab.com/react
 
 We debugged a lot, and tried out lots of things, until - **it should have been the very first thing to do actually** - we went to [the commits history of the React-Admin Simple-Rest-Data-Provider](https://github.com/marmelab/react-admin/commit/4a60ffa26b5d63c129e7dc8f6c0d7223a9aaea9c#diff-486dddab295c10b1022194007b982aa4554c0a7bf0cd62dc747d991119a0b44e) and we noticed that something was indeed changed in regards with the headers being sent out with the requests.  
 
-![ra-data-provider-commit](./images/ra-datea-provider-commit.png)
+![ra-data-provider-commit](/assets/images/ra-datea-provider-commit.png)
 
 Still, changes did not really explain why the requests were suddenly failing.
 Still, that was apparently the cause of the issue, since by forcibly removing, just before being sent by the httpclient, that new `range` header after it was added by the data provider, the problem disappeared and our Content-Range header was properly shown and used by ReactAdmin.  
