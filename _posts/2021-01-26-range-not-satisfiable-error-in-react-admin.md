@@ -2,7 +2,7 @@
 title: React Admin and Range Not Satisfiable Error
 published: true
 description: a nasty bug about http headers after simply updating a npm dependency
-tags: #debugging, #react, #api, #node
+tags: debugging, react, api, node
 ---
 
 TL;DR

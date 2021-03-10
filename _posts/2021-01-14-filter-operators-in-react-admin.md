@@ -2,11 +2,11 @@
 title: Filter Operators in React Admin and Sequelize
 published: true
 description: how to pass the operator you need in your query from a react admin filter component
-tags: #react, #mysql, #fullstack, #javascript
+tags: react mysql fullstack javascript
 ---
 
 
-### TLDR
+TL;DR
 
 If you want to pass operators from your filters, just append the operator type to the source property of your React Component, then have the backend parse it and create the where condition out of it.
 You can also make it dynamic by writing a custom filter which grabs the value from the filter, and the operator selected by another small component.

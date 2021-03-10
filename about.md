@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+background: '/assets/background_test.png'
 ---
 
 🏂✈🚞🌍📷🖥🤘👨‍👩‍👦‍👦🚀

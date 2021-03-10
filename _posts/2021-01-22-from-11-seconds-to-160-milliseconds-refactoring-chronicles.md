@@ -2,8 +2,9 @@
 title: From 11 seconds to 160 milliseconds 🚀 - Refactoring Chronicles  
 published: true
 description: Learn how MySQL Queries and Async Await can affect performance
-tags: #javascript, #mysql, #performance, #debugging
-cover_image: ./images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.jpg
+tags: javascript mysql performance debugging
+#cover_image: ./images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.jpg
+background: /assets/images/marc-olivier-jodoin-NqOInJ-ttqM-unsplash.jpg
 
 ---
 

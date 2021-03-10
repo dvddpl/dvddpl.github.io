@@ -2,7 +2,7 @@
 layout: post
 title: A year without goals (2020 retrospective - 2021 resolutions)
 description: Let´s look back at 2020 and look forward at 2021
-tags: #personalgrowth, #career, #personaldevelopment, #mindfulness
+tags: personalgrowth career personaldevelopment mindfulness
 ---
 
 

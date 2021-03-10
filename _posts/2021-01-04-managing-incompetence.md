@@ -3,7 +3,7 @@ layout: post
 title: 'Managing Incompetence: An Innovative Approach for Dealing with People'
 published: true
 description: dealing with incompetent people is frustrating.  a book review
-tags: #career, #managingpeople, #leadership, #motivation
+tags: career managingpeople, leadership motivation
 cover_image: https://media.giphy.com/media/Uk8VmSYTkhkbK/giphy.gif
 ---
 
