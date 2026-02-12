@@ -3,7 +3,7 @@ title: Maybe you should start listening to that voice telling you that YOU SUCK!
 published: true
 description:  Imposter Syndrome could be a good thing 
 tags: career beginners personalgrowth 
-background: /assets/images/telling-you-a-secret.png
+background: /assets/telling-you-a-secret.png
 ---
 
 Are you usually very **self-confident** and convinced you can do everything and you are very good at what you do or are you mostly full of doubts and feel you are not very good and **you don´t deserve what you have**, and what you achieved is just for some sort of luck?
@@ -32,7 +32,7 @@ Developers are a weird bunch.
 
 We can jump from feeling geniuses to self-pity in a matter of seconds: when we first run our program and it seems to work, and then we discover and get stuck for hours with a bug. 
 
-![I hate my job](/assets/images/i_hate_this_job_and_i_hate_my_life.jpg)
+![I hate my job](/assets/i_hate_this_job_and_i_hate_my_life.jpg)
 
 In my career, the best developers that I met, were not those arrogant smartasses who always thought they were right, rather those **humble guys who questioned themselves and worked (and learned) hard.** 
 Why?  because they were aware of their limits, their flaws, or simply they had enough experience to see projects fail, great designs become monsters, and **codebases transform from snippets of code poetry into balls of mud.**

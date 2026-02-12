@@ -4,7 +4,7 @@ published: true
 description: I always find it hard to explain why I love my job.
 cover_image: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hyov3ks7dfmdfnvuz075.png
 tags: career beginners advice softwareengineering
-background: /assets/images/passion-led-us-here.png
+background: /assets/passion-led-us-here.png
 ---
 
 A few days ago I was contacted by HR to know if I wanted to participate in the [Boys & Girls Day](https://www.girls-day.de/#)  with some workshop or presentation about my daily job. 
