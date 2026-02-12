@@ -15,11 +15,17 @@ gem "minima", "~> 2.0"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", "~> 209", group: :jekyll_plugins
+# Note: Ruby 2.6 is too old for github-pages 228+
+# Latest compatible version with Ruby 2.6 is ~227
+# For github-pages 232, upgrade to Ruby 3.0+
+# Note: github-pages 232 requires Ruby 3.0+
+# Using 227 for compatibility with Ruby 2.6.10
+# To use latest version (232), upgrade Ruby to 3.0+
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-feed", "~> 0.17"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

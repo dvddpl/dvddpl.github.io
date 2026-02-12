@@ -68,7 +68,7 @@ layout: post
 title: "Your Post Title Here"
 description: "Brief description for SEO and social media previews (150-160 chars)"
 tags: javascript nodejs aws serverless career
-background: /assets/images/your-background.jpg
+background: /assets/your-background.jpg
 ---
 ```
 
@@ -96,7 +96,7 @@ background: /assets/images/your-background.jpg
 - Common tags: javascript, nodejs, aws, serverless, react, career, leadership, debugging, tutorial, personalgrowth
 
 **background**:
-- Always use `/assets/images/filename.jpg` format
+- Always use `/assets/filename.jpg` format
 - Image should be 1900x1000px or similar ratio
 - Relevant to post topic
 - Properly licensed (Unsplash, own photos, etc.)
@@ -180,7 +180,7 @@ const example = (param) => {
 #### Image Guidelines
 - **Size**: 1900x1000px for backgrounds, optimize for web
 - **Format**: JPG for photos, PNG for screenshots/diagrams
-- **Location**: Always in `/assets/images/`
+- **Location**: Always in `/assets/`
 - **Naming**: Descriptive, lowercase, hyphens (e.g., `react-admin-error.png`)
 - **Alt text**: Always include descriptive alt text
 - **Licensing**: Use properly licensed images (Unsplash, own photos)

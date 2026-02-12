@@ -3,23 +3,40 @@
 ## Prerequisites
 
 ### Required Software
-- **Ruby**: 2.6.10 or higher (system has 2.6.10)
-- **Bundler**: 2.2.3 (specific version required)
+- **Ruby**: 3.3+ (GitHub Pages uses Ruby 3.3.4, system has 3.3.10)
+- **Bundler**: Latest version (4.0.6+)
 - **Git**: For version control
 
 ### Installation
 
 #### macOS (Current System)
 ```bash
-# Ruby is pre-installed on macOS
-ruby --version  # Should show 2.6.10 or higher
+# Install Ruby 3.3 via Homebrew
+brew install ruby@3.3
 
-# Install correct bundler version
-gem install bundler:2.2.3
+# Add to PATH (temporary for current session)
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
 
-# Verify installation
-bundle --version  # Should show 2.2.3
+# Or add to ~/.zshrc for permanent setup
+echo 'export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+
+# Verify Ruby version
+ruby --version  # Should show 3.3.10 or similar
+
+# Install bundler
+gem install bundler
+
+# Verify bundler installation
+bundle --version  # Should show 4.0.6 or higher
 ```
+
+#### Why Ruby 3.3?
+- GitHub Pages uses Ruby 3.3.4 in production
+- Ruby 2.6 (system default) is too old for latest github-pages gem (232)
+- Ruby 3.3 ensures local development matches production environment
 
 ## Setup
 
@@ -29,23 +46,37 @@ bundle --version  # Should show 2.2.3
 git clone https://github.com/dvddpl/dvddpl.github.io.git
 cd dvddpl.github.io
 
-# 2. Install dependencies
+# 2. Ensure Ruby 3.3 is in PATH
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
+
+# 3. Install dependencies
 bundle install
 
-# 3. Run local server
+# 4. Run local server
 bundle exec jekyll serve
 
-# 4. Open browser
+# 5. Open browser
 open http://localhost:4000
 ```
 
 ### Troubleshooting Setup
 
-#### Bundler Version Mismatch
+#### Ruby Version Too Old
 ```bash
-# Error: Could not find 'bundler' (2.2.3)
-# Solution:
-gem install bundler:2.2.3
+# Error: Gem requires Ruby version >= 3.0
+# Solution: Install Ruby 3.3 via Homebrew
+brew install ruby@3.3
+# Then add to PATH as shown above
+```
+
+#### Bundler Not Found
+```bash
+# Error: command not found: bundle
+# Solution: Ensure Ruby 3.3 bin directory is in PATH
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
+gem install bundler
 ```
 
 #### Permission Errors
@@ -113,7 +144,7 @@ layout: post
 title: "Your Post Title"
 description: "Brief description for SEO and previews"
 tags: javascript nodejs aws serverless
-background: /assets/images/your-image.jpg
+background: /assets/your-image.jpg
 ---
 ```
 
@@ -133,7 +164,7 @@ const example = "Use triple backticks for code blocks";
 
 ### Images
 
-![Alt text](/assets/images/your-image.jpg)
+![Alt text](/assets/your-image.jpg)
 
 ### Links
 
@@ -143,10 +174,10 @@ const example = "Use triple backticks for code blocks";
 #### 4. Add Images
 ```bash
 # Copy images to assets directory
-cp ~/Downloads/my-image.jpg assets/images/
+cp ~/Downloads/my-image.jpg assets/
 
 # Reference in post
-![Description](/assets/images/my-image.jpg)
+![Description](/assets/my-image.jpg)
 ```
 
 ### Front Matter Reference
@@ -161,7 +192,7 @@ title: "Post Title"   # Post title (use quotes if contains colons)
 ```yaml
 description: "SEO description"  # For search engines and previews
 tags: tag1 tag2 tag3           # Space-separated tags (no commas)
-background: /assets/images/bg.jpg  # Header background image
+background: /assets/bg.jpg  # Header background image
 ```
 
 #### Optional Fields
@@ -179,7 +210,7 @@ layout: post
 title: "How to [Do Something]"
 description: "Learn how to [accomplish task] with [technology]"
 tags: tutorial javascript nodejs
-background: /assets/images/tutorial-bg.jpg
+background: /assets/tutorial-bg.jpg
 ---
 
 ## TL;DR
@@ -217,7 +248,7 @@ layout: post
 title: "Lessons Learned from [Experience]"
 description: "Reflections on [topic]"
 tags: career leadership personalgrowth
-background: /assets/images/reflection-bg.jpg
+background: /assets/reflection-bg.jpg
 ---
 
 Opening hook or story.
@@ -266,7 +297,7 @@ open http://localhost:4000
 - Check `published: false` isn't set
 
 #### Images Not Loading
-- Check path starts with `/assets/images/`
+- Check path starts with `/assets/`
 - Check file exists in correct location
 - Check filename matches exactly (case-sensitive)
 
@@ -286,7 +317,7 @@ bundle exec jekyll serve
 
 # 2. Stage changes
 git add _posts/2026-02-11-my-new-post.md
-git add assets/images/new-image.jpg
+git add assets/new-image.jpg
 
 # 3. Commit with descriptive message
 git commit -m "Add post: My New Post"
@@ -452,7 +483,7 @@ bundle exec jekyll serve --limit_posts 5
 
 ### Optimize Images
 ```bash
-# Before adding to assets/images/, optimize:
+# Before adding to assets/, optimize:
 # - Resize to appropriate dimensions
 # - Compress (use ImageOptim, TinyPNG, etc.)
 # - Consider WebP format for modern browsers

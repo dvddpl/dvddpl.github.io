@@ -1,7 +1,7 @@
 # Project Overview
 
 ## Purpose
-Personal technical blog by Davide de Paolis, Technical Lead based in Hamburg, Germany. The blog covers software engineering topics including AWS, serverless architecture, Node.js, React, leadership, and personal development.
+Personal technical blog by Davide de Paolis, Engineering Manager based in Hamburg, Germany. The blog covers software engineering topics including AWS, serverless architecture, Node.js, React, leadership, and personal development.
 
 ## History
 - Started: December 2020
@@ -30,7 +30,7 @@ Author writes Markdown → Git push → GitHub Pages builds → Static site serv
 
 **Content Layer**:
 - `_posts/`: Blog posts in Markdown with YAML front matter
-- `assets/images/`: Post images and backgrounds
+- `assets/`: Post images and backgrounds
 - Front matter: layout, title, description, tags, background
 
 **Configuration Layer**:
@@ -101,36 +101,8 @@ Author writes Markdown → Git push → GitHub Pages builds → Static site serv
 - Developers learning AWS/serverless
 - Career-focused developers
 
-## Known Issues
-
-### Critical
-1. Dependencies 5 years out of date (security risk)
-2. Bundler version mismatch (blocks local development)
-3. No README (poor onboarding)
-
-### Important
-1. Inconsistent front matter (background vs cover_image)
-2. No content since April 2021
-3. No LICENSE file
-4. Email obfuscation ineffective
-
-### Minor
-1. No remote theme version pinning
-2. Mixed image path conventions
-3. No post organization (flat directory)
-4. Hardcoded values repeated across files
-
-## Success Metrics
-- Blog hasn't been updated in 5 years
-- Good content quality when active
-- Clean, readable code
-- Proper version control
-- Free hosting costs
 
 ## Future Vision
-- Revive blog with new posts
-- Update to modern Jekyll/GitHub Pages
-- Improve documentation
 - Add search and comments
 - Implement proper git workflow
 - Optimize for performance and SEO

@@ -12,8 +12,8 @@ This blog is built with Jekyll and hosted on GitHub Pages. It features technical
 
 ### Prerequisites
 
-- Ruby 2.6.10 or higher
-- Bundler 2.2.3
+- Ruby 3.3+ (GitHub Pages uses Ruby 3.3.4)
+- Bundler (latest version)
 - Git
 
 ### Setup
@@ -23,8 +23,19 @@ This blog is built with Jekyll and hosted on GitHub Pages. It features technical
 git clone https://github.com/dvddpl/dvddpl.github.io.git
 cd dvddpl.github.io
 
-# Install correct bundler version
-gem install bundler:2.2.3
+# Install Ruby 3.3 via Homebrew (macOS)
+brew install ruby@3.3
+
+# Add Ruby 3.3 to PATH
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
+
+# Or add to ~/.zshrc for permanent:
+echo 'export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"' >> ~/.zshrc
+
+# Install bundler
+gem install bundler
 
 # Install dependencies
 bundle install
@@ -50,13 +61,13 @@ layout: post
 title: "Your Post Title"
 description: "Brief description for SEO (150-160 characters)"
 tags: javascript nodejs aws
-background: /assets/images/your-image.jpg
+background: /assets/your-image.jpg
 ---
 
 Your content here...
 EOF
 
-# 3. Add images to assets/images/
+# 3. Add images to assets/
 
 # 4. Test locally
 bundle exec jekyll serve
@@ -75,7 +86,7 @@ layout: post
 title: "Post Title Here"
 description: "SEO description 150-160 characters"
 tags: tag1 tag2 tag3
-background: /assets/images/image-name.jpg
+background: /assets/image-name.jpg
 ---
 
 Opening paragraph that hooks the reader...
@@ -101,8 +112,7 @@ Photo by [Author](link) on [Unsplash](link)
 ```
 dvddpl.github.io/
 ├── _posts/              # Blog posts (YYYY-MM-DD-title.md)
-├── assets/
-│   └── images/          # Post images and backgrounds
+├── assets/              # Post images and backgrounds
 ├── .kiro/               # Agent context and steering files
 │   ├── context/         # Project documentation for AI
 │   └── steering/        # Development standards
@@ -120,7 +130,8 @@ dvddpl.github.io/
 - **Generator**: Jekyll 3.10.0
 - **Hosting**: GitHub Pages
 - **Theme**: [StartBootstrap Clean Blog](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll)
-- **Language**: Ruby, Markdown
+- **Ruby**: 3.3+ (GitHub Pages uses 3.3.4)
+- **Language**: Markdown
 - **Deployment**: Automatic via GitHub Pages (gh-pages branch)
 
 ## Development
@@ -172,7 +183,7 @@ layout: post
 title: "Post Title"
 description: "SEO description"
 tags: tag1 tag2 tag3
-background: /assets/images/image.jpg
+background: /assets/image.jpg
 ---
 ```
 
@@ -182,8 +193,8 @@ Posts must follow: `_posts/YYYY-MM-DD-title-with-dashes.md`
 
 ### Images
 
-- Store in `assets/images/`
-- Use absolute paths: `/assets/images/filename.jpg`
+- Store in `assets/`
+- Use absolute paths: `/assets/filename.jpg`
 - Optimize before adding
 - Use descriptive filenames
 
@@ -243,7 +254,7 @@ bundle install
 
 ### Images Not Loading
 
-- Check path starts with `/assets/images/`
+- Check path starts with `/assets/`
 - Check file exists in correct location
 - Check filename matches exactly (case-sensitive)
 
@@ -307,18 +318,34 @@ Code snippets are licensed under [MIT License](LICENSE).
 
 ## Status
 
-⚠️ **Note**: This blog was last updated in April 2021 and is currently being revived with updated dependencies and improved documentation.
+✅ **Updated**: This blog has been updated with modern dependencies (Feb 2026)
+
+### Completed Updates
+
+- ✅ Ruby upgraded from 2.6 to 3.3
+- ✅ Dependencies updated from github-pages 209 (2020) to 232 (2026)
+- ✅ All gems match GitHub Pages production environment
+- ✅ Complete documentation added
+- ✅ Development environment modernized
+
+### Next Steps
+
+- Resume regular posting (blog inactive since April 2021)
+- Standardize front matter across posts
+- Add search and comments functionality
 
 ### Current Version
 
 - Jekyll: 3.10.0
-- GitHub Pages: 209 → 232 (update recommended)
+- GitHub Pages: 232 (updated Feb 2026)
+- Ruby: 3.3.10 (matches GitHub Pages 3.3.4)
 - Last Post: April 2021
 - Total Posts: 9
 
 ### Roadmap
 
-- [ ] Update dependencies to latest versions
+- [x] Update Ruby to 3.3+
+- [x] Update dependencies to latest versions (github-pages 232)
 - [ ] Standardize front matter across all posts
 - [ ] Add search functionality
 - [ ] Implement comments system

@@ -14,12 +14,12 @@ touch _posts/2026-02-11-my-post-title.md
 
 # 2. Add front matter (copy from template below)
 # 3. Write content in Markdown
-# 4. Add images to assets/images/
+# 4. Add images to assets/
 # 5. Test locally
 bundle exec jekyll serve
 
 # 6. Commit and push
-git add _posts/2026-02-11-my-post-title.md assets/images/
+git add _posts/2026-02-11-my-post-title.md assets/
 git commit -m "Add post: My Post Title"
 git push origin gh-pages
 ```
@@ -31,7 +31,7 @@ layout: post
 title: "Your Post Title"
 description: "Brief description for SEO (150-160 chars)"
 tags: javascript nodejs aws
-background: /assets/images/your-image.jpg
+background: /assets/your-image.jpg
 ---
 
 Opening paragraph that hooks the reader...
@@ -117,9 +117,9 @@ ls -la _posts/
 ### Images Not Loading
 ```bash
 # Verify image exists
-ls -la assets/images/your-image.jpg
+ls -la assets/your-image.jpg
 
-# Check path in post starts with /assets/images/
+# Check path in post starts with /assets/
 # Check filename matches exactly (case-sensitive)
 ```
 
@@ -139,13 +139,13 @@ bundle exec jekyll doctor
 ```bash
 # 1. Optimize image first (compress, resize)
 # 2. Copy to assets directory
-cp ~/Downloads/my-image.jpg assets/images/
+cp ~/Downloads/my-image.jpg assets/
 
 # 3. Use descriptive filename
-mv assets/images/my-image.jpg assets/images/react-admin-filter-error.jpg
+mv assets/my-image.jpg assets/react-admin-filter-error.jpg
 
 # 4. Reference in post with absolute path
-# ![Description](/assets/images/react-admin-filter-error.jpg)
+# ![Description](/assets/react-admin-filter-error.jpg)
 ```
 
 ## Standardizing Front Matter
@@ -262,7 +262,7 @@ time bundle exec jekyll build
 du -sh _site/
 
 # Check image sizes
-du -sh assets/images/*
+du -sh assets/*
 ```
 
 ## Backing Up Content
@@ -274,7 +274,7 @@ du -sh assets/images/*
 tar -czf posts-backup-$(date +%Y%m%d).tar.gz _posts/
 
 # Export images
-tar -czf images-backup-$(date +%Y%m%d).tar.gz assets/images/
+tar -czf images-backup-$(date +%Y%m%d).tar.gz assets/
 
 # Or just ensure Git is up to date
 git push origin gh-pages

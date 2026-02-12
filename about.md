@@ -11,7 +11,7 @@ Sport addicted, productivity obsessed, avid learner, travel enthusiast, expat, 2
 
 I solve problems through code and keep my sanity with sports. 
 
-Work:  Technical Lead at Goodgamestudios 
+Work:  Engineering Manager at SevDesk 
 
 Where: Hamburg (DE)
 

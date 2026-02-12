@@ -16,7 +16,7 @@ layout: post
 title: "Post Title Here"
 description: "SEO description 150-160 characters"
 tags: tag1 tag2 tag3
-background: /assets/images/image-name.jpg
+background: /assets/image-name.jpg
 ---
 ```
 
@@ -25,7 +25,7 @@ background: /assets/images/image-name.jpg
 - `title` must use quotes if it contains colons
 - `description` should be 150-160 characters for optimal SEO
 - `tags` are space-separated, lowercase, no commas
-- `background` must use absolute path starting with `/assets/images/`
+- `background` must use absolute path starting with `/assets/`
 - Do NOT use `cover_image` field (inconsistent with theme)
 - Do NOT use `published` field unless intentionally hiding post
 
@@ -46,12 +46,12 @@ Examples:
 ## Image Standards
 
 ### Image Paths
-- Always use absolute paths: `/assets/images/filename.jpg`
-- Never use relative paths: `../assets/images/filename.jpg`
+- Always use absolute paths: `/assets/filename.jpg`
+- Never use relative paths: `../assets/filename.jpg`
 - Never use external URLs for local images
 
 ### Image Files
-- Store all images in `assets/images/` directory
+- Store all images in `assets/` directory (flat structure)
 - Use descriptive filenames: `react-admin-error.png` not `screenshot1.png`
 - Use lowercase with hyphens: `my-image.jpg` not `My_Image.jpg`
 - Optimize images before adding (compress, resize appropriately)
@@ -194,7 +194,7 @@ Before publishing any post, verify:
 
 - [ ] Front matter follows standard format
 - [ ] Filename follows YYYY-MM-DD-title.md convention
-- [ ] Images use absolute paths starting with /assets/images/
+- [ ] Images use absolute paths starting with /assets/
 - [ ] Code blocks specify language
 - [ ] All links work
 - [ ] Images load correctly
@@ -260,8 +260,8 @@ Keep README up to date with:
 - Check `published: false` isn't set
 
 **Images not loading:**
-- Check path starts with `/assets/images/`
-- Check file exists
+- Check path starts with `/assets/`
+- Check file exists in assets/ directory
 - Check filename matches exactly (case-sensitive)
 
 **Build errors:**

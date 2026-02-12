@@ -71,7 +71,7 @@ layout: post
 title: "Post Title"
 description: "SEO description (150-160 characters)"
 tags: tag1 tag2 tag3
-background: /assets/images/image.jpg
+background: /assets/image.jpg
 ---
 ```
 
@@ -90,8 +90,8 @@ Examples:
 
 ### Image Guidelines
 
-- Store in `assets/images/`
-- Use absolute paths: `/assets/images/filename.jpg`
+- Store in `assets/`
+- Use absolute paths: `/assets/filename.jpg`
 - Optimize before adding (compress, resize)
 - Use descriptive filenames: `react-error.png` not `screenshot1.png`
 - Always include alt text
@@ -137,7 +137,7 @@ bundle exec jekyll serve
 
 - [ ] Front matter follows standard format
 - [ ] Filename follows YYYY-MM-DD-title.md convention
-- [ ] Images use absolute paths starting with /assets/images/
+- [ ] Images use absolute paths starting with /assets/
 - [ ] Code blocks specify language
 - [ ] All links work
 - [ ] Images load correctly
